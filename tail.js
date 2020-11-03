@@ -1,8 +1,7 @@
-const tail = function() {
-  words.slice(0);
+const tail = function(arr) {
+  let newArr = arr.slice(1);
+  return newArr
 };
-
-const words = ["Yo Yo", "Lighthouse", "Labs"];
 
 module.exports = tail
 
