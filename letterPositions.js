@@ -9,16 +9,16 @@ const eqArrays = function(middle, expected) {
 
 const assertArraysEqual = function(middle, expected) {
   if (eqArrays(middle, expected)) {
-    console.log(`✅✅✅ ${middle} === ${expected}`);
+    console.log(`✅✅✅ Assertion Passed: ${middle} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑 ${middle} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${middle} !== ${expected}`);
   }
 
 };
 
-
 const letterPositions = function(sentence) {
   const results = {};
+  
   for (let x = 0; x < sentence.length; x++) {
     if (!results[sentence[x]]) {
       results[sentence[x]] = [];
@@ -34,4 +34,6 @@ const string = 'hello';
 const input = letterPositions(string)
 
 assertArraysEqual(input['l'], [2, 3]);
+
+module.exports = letterPositions
 

@@ -32,9 +32,9 @@ const results1 = takeUntil(data1, x => x < 0);
 assertArraysEqual(results1[0], data1[0]);
 assertArraysEqual(results1[1], data1[1]);
 
-console.log('---');
-
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 assertArraysEqual(results2[0], data2[0]);
 assertArraysEqual(results2[1], data2[1]);
+
+module.exports = takeUntil

@@ -39,3 +39,4 @@ const results1 = map(words, word => word[0]);
 assertArraysEqual(results1[0], 'g');
 assertArraysEqual(map(words, word => word[0]), words.map(word => word[0]));
 
+module.exports = map

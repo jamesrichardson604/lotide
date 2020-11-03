@@ -1,20 +1,20 @@
-// const eqArrays = function(arrOne, arrTwo){  
-//   if(JSON.stringify(arrOne) === JSON.stringify(arrTwo)){
-//     return true
-//   }else{
-//     return false
-//   }
+const eqArrays = function(arrOne, arrTwo){  
+  if(JSON.stringify(arrOne) === JSON.stringify(arrTwo)){
+    return true
+  }else{
+    return false
+  }
   
-// }
+}
 
-// const assertArraysEqual = function(arrOne, arrTwo){
-//   if(eqArrays(arrOne, arrTwo)){
-//     console.log(`✅✅✅ ${arrOne} === ${arrTwo}`);
-//   }else{
-//     console.log(`🛑🛑🛑 ${arrOne} !== ${arrTwo}`);
-//   }
+const assertArraysEqual = function(arrOne, arrTwo){
+  if(eqArrays(arrOne, arrTwo)){
+    console.log(`✅✅✅ ${arrOne} === ${arrTwo}`);
+  }else{
+    console.log(`🛑🛑🛑 ${arrOne} !== ${arrTwo}`);
+  }
 
-// }
+}
 
 const without = function(source, itemsToRemove){
     let newArray = []
@@ -23,13 +23,13 @@ const without = function(source, itemsToRemove){
         newArray.push(x)
       }
     }
-   
-    console.log(newArray)
+   return newArray
   
   }
-  
-  
 
+ 
 
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // => ["1", "2"]
+
+module.exports = without
