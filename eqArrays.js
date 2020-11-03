@@ -1,25 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 ${actual} !== ${expected}`);
-  }
+const assertEqual = require('./assertEqual')
 
-};
-
-const eqArrays = function(arrOne, arrTwo){
-  if(JSON.stringify(arrOne) === JSON.stringify(arrTwo)){
-    return true
-  }else{
-    return false
-  }
-  
+const eqArrays = function(arrOne, arrTwo) { 
+  assertEqual(JSON.stringify(arrOne), JSON.stringify(arrTwo))
 }
 
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+module.exports = eqArrays
 
